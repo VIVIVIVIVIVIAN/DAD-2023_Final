@@ -1,0 +1,36 @@
+<title>Weight Loss Calculator - Result</title>
+
+<style>
+  h1{
+      font-size: 120px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: bold;
+      color:rgb(8, 98, 68);
+      text-align: center;
+  }
+  p{
+      font-size: 50px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight: normal;
+      color:rgb(108, 183, 157);
+      text-align: center;
+  }
+
+</style>
+  <h1>Weight Loss Calculator</h1>
+  <p>Your BMI is {{ bmi }}</p>
+  {% if bmi < 18.5 %}
+  <p>You are underweight.</p>
+  {% elif bmi < 25 %}
+  <p>Your weight is normal.</p>
+  {% elif bmi < 30 %}
+  <p>You are overweight.</p>
+  {% else %}
+  <p>You are obese.</p>
+  {% endif %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+  
+{% endblock %}
